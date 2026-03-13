@@ -1,0 +1,20 @@
+.section-wrapper {
+  padding: 80px 20px;
+  min-height: 400px;
+}
+
+.section-wrapper.dark {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #ffffff;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 60px 16px;
+  }
+}

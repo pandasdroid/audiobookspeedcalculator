@@ -1,0 +1,151 @@
+.guide-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.guide-section {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guide-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.guide-header:hover {
+  background: #f8f9fa;
+}
+
+.guide-header.open {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.guide-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex: 1;
+}
+
+.guide-icon {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.guide-header.open .guide-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.guide-content {
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.guide-list {
+  list-style: none;
+  padding: 24px;
+  margin: 0;
+}
+
+.guide-list li {
+  padding: 12px 0;
+  padding-left: 32px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.guide-list li::before {
+  content: '•';
+  position: absolute;
+  left: 12px;
+  color: #667eea;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.guide-list li strong {
+  color: #667eea;
+  font-weight: 700;
+}
+
+.guide-footer {
+  max-width: 900px;
+  margin: 50px auto 0;
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.footer-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.footer-text strong {
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .guide-header {
+    padding: 16px 20px;
+  }
+
+  .guide-title {
+    font-size: 1rem;
+  }
+
+  .guide-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 1.3rem;
+  }
+
+  .guide-list {
+    padding: 20px;
+  }
+
+  .guide-list li {
+    padding: 10px 0;
+    padding-left: 28px;
+    font-size: 0.95rem;
+  }
+
+  .guide-list li::before {
+    left: 8px;
+    font-size: 1.2rem;
+  }
+
+  .guide-footer {
+    padding: 24px 20px;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+  }
+}
