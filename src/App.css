@@ -3,6 +3,10 @@
   background: #f5f5f5;
 }
 
+.content-with-header {
+  padding-top: 80px;
+}
+
 .app-footer {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: white;

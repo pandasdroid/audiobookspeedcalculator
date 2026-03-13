@@ -1,8 +1,18 @@
 # Audiobook Speed Calculator
 
-A modern, engaging web application that helps audiobook listeners calculate time savings, discover their optimal playback speed, and track their reading queue.
+A modern, gamified web application that helps audiobook listeners calculate time savings, discover their optimal playback speed, and track their reading queue.
 
 ## Features
+
+### 🎮 Gamification System
+- **Achievements & Badges** - Unlock 8 different achievements
+- **Experience Points (XP)** - Earn points for using features
+- **Level System** - Progress from Beginner to Time Lord (6 levels)
+- **Daily Streaks** - Track consecutive days of usage
+- **Progress Tracking** - Visual level progression bar
+- **Achievement Notifications** - Celebratory toasts when you unlock achievements
+
+## Core Features
 
 ### 🎯 Hero Speed Calculator
 - Interactive slider (0.5x - 3x speed)

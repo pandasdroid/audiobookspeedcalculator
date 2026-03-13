@@ -20,7 +20,27 @@ export default function SpeedCalculator() {
 
   useEffect(() => {
     savePreferredSpeed(speed);
-  }, [speed]);
+
+    // Track speed changes for achievement
+    const speeds = JSON.parse(localStorage.getItem('tried_speeds') || '[]');
+    if (!speeds.includes(speed)) {
+      speeds.push(speed);
+      localStorage.setItem('tried_speeds', JSON.stringify(speeds));
+      if (speeds.length >= 5 && window.unlockAchievement) {
+        window.unlockAchievement('speed_explorer');
+      }
+    }
+
+    // Unlock speedster achievement
+    if (speed >= 2.5 && window.unlockAchievement) {
+      window.unlockAchievement('speedster');
+    }
+
+    // Unlock time saver achievement
+    if (timeSaved.hours >= 10 && window.unlockAchievement) {
+      window.unlockAchievement('time_saver');
+    }
+  }, [speed, timeSaved.hours]);
 
   const handleSpeedChange = (e) => {
     setSpeed(parseFloat(e.target.value));
