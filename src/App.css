@@ -1,6 +1,6 @@
 .app {
   min-height: 100vh;
-  background: #f5f5f5;
+  background: var(--bg-main);
 }
 
 .content-with-header {
@@ -8,10 +8,12 @@
 }
 
 .app-footer {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: white;
-  padding: 50px 20px;
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  padding: 60px 20px;
   text-align: center;
+  margin-top: 100px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
@@ -20,22 +22,21 @@
 }
 
 .footer-text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin: 0 0 12px 0;
+  margin: 0 0 10px 0;
+  color: var(--text-primary);
 }
 
 .footer-subtext {
-  font-size: 1rem;
-  opacity: 0.8;
+  font-size: 0.95rem;
+  opacity: 0.7;
   margin: 0;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+@media (max-width: 768px) {
+  .content-with-header {
+    padding-top: 140px;
+  }
 }
